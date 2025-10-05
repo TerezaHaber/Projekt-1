@@ -1,1 +1,131 @@
+/* === ZÁKLADNÍ RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* === BARVY ===
+  - Hlavní: Khaki (#BDB76B)
+  - Akcent: Pálená oranžová (#CC7722)
+  - Pozadí: Krémová (#FFF8E7)
+  - Text: Tmavě hnědá (#3B2F2F)
+  - Sekce: Světle béžová (#F5E6CC)
+*/
+:root {
+  --khaki: #bdb76b;
+  --orange: #cc7722;
+  --brown: #3b2f2f;
+  --cream: #fff8e7;
+  --beige: #f5e6cc;
+}
+
+/* === ZÁKLAD STRÁNKY === */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: var(--brown);
+  background-color: var(--cream);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+/* === HLAVIČKA === */
+.header {
+  background: linear-gradient(135deg, var(--khaki), var(--orange));
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* === SEKCE === */
+section {
+  padding: 3rem 10%;
+  background-color: var(--beige);
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--cream);
+}
+
+/* === NADPISY === */
+h2 {
+  font-size: 1.8rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--khaki);
+  padding-left: 10px;
+}
+
+h3 {
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+/* === TEXT === */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* === ODKAZY === */
+a {
+  color: var(--orange);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--khaki);
+  text-decoration: underline;
+}
+
+/* === OBRÁZKY === */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* === KONTAKT SEKCIA === */
+.kontakt {
+  text-align: center;
+}
+
+.kontakt a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt a:hover {
+  background-color: var(--khaki);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 2rem 5%;
+  }
+}
